@@ -137,3 +137,5 @@ You can see the process occurring in execution-time and if everything runs with 
 
 ## References
 * https://levelup.gitconnected.com/how-to-deploy-a-react-app-to-firebase-using-github-actions-step-by-step-11367e0627d5
+
+* https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
