@@ -95,18 +95,18 @@ jobs:
 
 It's a pretty simple and easy to understand code, the article taken as base to this one, explains the code in this way:
 
-* Line 1: The name of your workflow. It can be literally any string, although it’s a good idea (as always) to keep it relevant to what you’re doing.
-* Lines 3–6: The ‘on’ field establishes the conditions on where your workflow is going to run. In this case, it is going to run every time there is a ‘push’ event related to the master branch of the repository.
-* Line 8: You can define any number of jobs below the ‘jobs’ field, and they’ll be executed in parallel or sequentially.
-* Line 9: Name of the job. It can be any name.
-* Line 10: Defines in which kind of environment the job will run. It can be Windows Server 2019, Ubuntu (16.04, 18.04, or 20.04), or macOS Catalina 10.15.
-* Line 11: The ‘steps’ field lists any number of steps to be run in a job.
-* Line 12: ‘actions/checkout@v2’ is an action from the GitHub marketplace that will basically clone your repository into the workflow container and make it available for you to work with it.
-* Lines 13–15: ‘actions/setup-node@v1’ is another action from the marketplace that sets up Node and NPM for you, so you don’t need to worry about installing them.
-* Line 16: This will install all dependencies for your application, similar to what ‘npm install’ would do.
-* Line 17: This will execute a React script to build an optimized version on your application, and place all optimized files on a folder called ‘build’, which is the only thing we’ll be sending to Firebase Hosting (as per firebase.json config).
-* Lines 18–21: For this tutorial, we decided to use the action ‘w9jds/firebase-action@v1.5.0’, available on the Actions Marketplace. This action will install firebase-tools and execute any command you like, which you have to pass as an argument to ‘with’, with an ‘args’ key. In our case, all we want is to do a single deploy to Hosting, hence the ‘deploy — only hosting’.
-* Lines 22–23: For every step you can pass variables that will be set on the environment for the given step, being available for the commands being executed. In this case, the firebase-actions demands the Firebase token that we extracted above to be set as an environment variable, so we’re fulfilling that demand by referencing the secret we set earlier with the syntax ${{ secrets.<SECRET_NAME> }}.
+* The **name** of your workflow. It can be literally any string, although it’s a good idea (as always) to keep it relevant to what you’re doing.
+* The **‘on’** field establishes the conditions on where your workflow is going to run. In this case, it is going to run every time there is a ‘push’ event related to the master branch of the repository.
+* You can define any number of jobs below the **‘jobs’** field, and they’ll be executed in parallel or sequentially.
+* **build** Name of the job. It can be any name.
+* **runs-on** Defines in which kind of environment the job will run. It can be Windows Server 2019, Ubuntu (16.04, 18.04, or 20.04), or macOS Catalina 10.15.
+* The **‘steps’** field lists any number of steps to be run in a job.
+* **‘actions/checkout@v2’** is an action from the GitHub marketplace that will basically clone your repository into the workflow container and make it available for you to work with it.
+* **‘actions/setup-node@v1’** is another action from the marketplace that sets up Node and NPM for you, so you don’t need to worry about installing them.
+* **run: yarn** This will install all dependencies for your application, similar to what ‘npm install’ would do.
+* **run: yarn build** This will execute a React script to build an optimized version on your application, and place all optimized files on a folder called ‘build’, which is the only thing we’ll be sending to Firebase Hosting (as per firebase.json config).
+* **w9jds/firebase-action@v1.5.0** For this tutorial, we decided to use the action *‘w9jds/firebase-action@v1.5.0’*, available on the Actions Marketplace. This action will install firebase-tools and execute any command you like, which you have to pass as an argument to **‘with’**, with an **‘args’** key. In our case, all we want is to do a single deploy to Hosting, hence the *‘deploy — only hosting’*.
+* For every step you can pass variables that will be set on the environment for the given step, being available for the commands being executed. In this case, the firebase-actions demands the Firebase token that we extracted above to be set as an environment variable, so we’re fulfilling that demand by referencing the secret we set earlier with the syntax ${{ secrets.<SECRET_NAME> }}.
 
 For a deeper reference about the syntax of this code you can check on full reference: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
