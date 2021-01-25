@@ -64,11 +64,11 @@ Now, back to the app's root directory, we'll start setting some Firebase files, 
 `firebase init`
 
 This will open some options in the terminal:
-* First select the **Hosting** option;
-* Select **Use an existing project**;
-* then select the project you created in [this step]() in Firebase;
-* Set the public directory as 'build' (it's the folder created by react scripts when building the app);
-* Finally you can set as a single page application;
+* first select the **Hosting** option;
+* select **Use an existing project**;
+* then select the project you created in [this step](#starting-things-on-firebase) in Firebase;
+* set the public directory as 'build' (it's the folder created by react scripts when building the app);
+* finally you can set as a single page application;
 
 > All this config can be resetted later...
 
