@@ -1,4 +1,7 @@
-# Deploying a React App Using Firebase
+<div align="center">
+  <img width=300px src="./react-native-firebase-1.svg" />
+  <h1>Deploying a React App Using Firebase</h1>
+</div>
 
 ## Step-by-step
 
