@@ -1,9 +1,10 @@
 <div align="center">
   <img width=300px src="./react-native-firebase-1.svg" />
-  <h1>Deploying a React App Using Firebase</h1>
+  <h1>Automating the deploy of a React App Using Firebase and Github Actions</h1>
 </div>
 
 ## Step-by-step
+Here we'll see a fast step-by-step tutorial, to deploy your react app.
 
 ### Make sure NPM and NPX are installed locally
 
@@ -16,11 +17,17 @@ After that, you can install NPX via CI, using:
 
 Now you'll need a react app to deploy, and it could be a new app or one that you've been working a time ago.
 
+In this case I'll create a new one using:
+
+`npx create react-app my-app --template typescript`
+
 ### Starting Things on Firebase
 
-So we got our app, and now we need to set things up in firebase. And to get it started, navigate to [Firebase](https://firebase.google.com/) and create an account if you don't have it.
+So we got our app, and now we need to set things up in firebase and to get it started, navigate to [Firebase](https://firebase.google.com/) (create an account if you don't have it), and go to **console** and you will reach here...
 
-After that, in the Firebase console home, you'll have the option to add a project and this is what we need now.
+<img src="./create-project-firebase.png" />
+
+...and here you'll create a new project, or add a new one if you already have other projects in there.
 
 ### Firebase CI
 
@@ -35,15 +42,20 @@ And to extract the token use:
 
 `firebase login:ci`
 
+After you select you account to login, a token must be provided on your terminal, you should keep this openned because we gonna need it in the next step.
+
+<img src="./authentication-ci.png"/>
 ### Storing Token in GitHub Secrets
 We've got our token, check!
 GitHub has a way to handle with secrets and those secrets can be easily used in workflows.
-And to store those secrets:
+Now, to store those secrets:
 
 * go to your repo settings
 * then secrets
 * then New repository secret
 * and finally, add the name (FIREBASE_TOKEN for example...) and it value.
+
+<img src="./token-secret.png" />
 
 ### Setting Firebase on App
 Token stored on github secrets, check!
@@ -56,9 +68,11 @@ This will open some options in the terminal:
 * Select **Use an existing project**;
 * then select the project you created in [this step]() in Firebase;
 * Set the public directory as 'build' (it's the folder created by react scripts when building the app);
-* Finally you can set as a single page applicatiion;
+* Finally you can set as a single page application;
 
 > All this config can be resetted later...
+
+<img src="./firebase-init.png" />
 
 ### Workflow File
 Have we got our *.firebaserc* and *firebase.json* set?! Yes, we have!
@@ -93,6 +107,8 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 ```
 
+<img src="saving-yml-file.png" />
+
 It's a pretty simple and easy to understand code, the article taken as base to this one, explains the code in this way:
 
 * The **name** of your workflow. It can be literally any string, although it’s a good idea (as always) to keep it relevant to what you’re doing.
@@ -112,6 +128,12 @@ For a deeper reference about the syntax of this code you can check on full refer
 
 ### Run it
 Okay, now that we're all set, we must commit and push all changes in the main branch, and see the magic happening. In GitHub, you can check the logs by going into your project actions an there you can see GitHub Action for Firebase step an there you will find the URL that your app is on.
+
+<img src="workflow-github.png" />
+
+You can see the process occurring in execution-time and if everything runs with no errors, you should see the URL displayed in the logs.
+
+<img src="all-fine.png" />
 
 ## References
 * https://levelup.gitconnected.com/how-to-deploy-a-react-app-to-firebase-using-github-actions-step-by-step-11367e0627d5
