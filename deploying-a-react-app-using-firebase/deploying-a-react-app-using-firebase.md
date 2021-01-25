@@ -45,6 +45,7 @@ And to extract the token use:
 After you select you account to login, a token must be provided on your terminal, you should keep this openned because we gonna need it in the next step.
 
 <img src="./authentication-ci.png"/>
+
 ### Storing Token in GitHub Secrets
 We've got our token, check!
 GitHub has a way to handle with secrets and those secrets can be easily used in workflows.
