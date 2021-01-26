@@ -4,7 +4,7 @@
 </div>
 
 ## Step-by-step
-Yes, this will be a good and old step-by-step tutorial, so... enough of talking and let's do it!
+Okay this will be a fast step-by-step tutorial showing how to automate a React app deploy
 
 ## Repo
 So first of all, get a repo for the app in Github, or, if you already have one, you can use it too.
