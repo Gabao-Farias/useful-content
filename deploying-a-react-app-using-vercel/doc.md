@@ -4,7 +4,7 @@
 </div>
 
 ## Step-by-step
-Okay this will be a fast step-by-step tutorial showing how to automate a React app deploy
+Okay this will be a fast step-by-step tutorial showing how to automate a React app deploy using Vercel.
 
 ## Repo
 So first of all, get a repo for the app in Github, or, if you already have one, you can use it too.
