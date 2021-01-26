@@ -8,5 +8,5 @@ A repo to maintain great .md files that are really useful, specially for you Rea
 
 ## Summary
 
-[Automating the Deploy of a React App Using Firebase and Github Actions](./deploying-a-react-app-using-firebase/doc.md)
-[Automating the Deploy of a React App Using Vercel]()
+* [Automating the Deploy of a React App Using Firebase and Github Actions](./deploying-a-react-app-using-firebase/doc.md)
+* [Automating the Deploy of a React App Using Vercel]()
