@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./logomark.png" width="300px" />
-  <h1>Automating the Deploy of a React App Using Netlify and Github Actions</h1>
+  <h1>Automating the Deploy of a React App Using Netlify</h1>
 </div>
 
 ## React App
