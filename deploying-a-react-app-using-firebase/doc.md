@@ -111,7 +111,6 @@ jobs:
 <img src="saving-yml-file.png" />
 
 > In the line that says 'uses: w9jds/firebase-action@v1.5.0', there has been a situation that I passed, wich I needed to execute the deploy command of Firebase, but in other directory that wasn't root, so I used the below code instead:
-
 `npm install -g firebase-tools && cd <THE_SPECIFIC_DIRECTORY_HERE> && yarn && yarn build && firebase deploy --only hosting`
 
 It's a pretty simple and easy to understand code, the article taken as base to this one, explains the code in this way:
