@@ -8,6 +8,6 @@ A repo to maintain great .md files that are really useful, specially for you, Re
 
 ## Summary
 
-* [Automating the Deploy of a React App Using Firebase and Github Actions](./deploying-a-react-app-using-firebase/doc.md)
-* [Automating the Deploy of a React App Using Netlify](./deploying-a-react-app-using-netlify/doc.md)
-* [Automating the Deploy of a React App Using Vercel](./deploying-a-react-app-using-vercel/doc.md)
+* [Automating the Deploy of a React App Using Firebase and Github Actions](./deploying-a-react-app-using-firebase/README.md)
+* [Automating the Deploy of a React App Using Netlify](./deploying-a-react-app-using-netlify/README.md)
+* [Automating the Deploy of a React App Using Vercel](./deploying-a-react-app-using-vercel/README.md)
