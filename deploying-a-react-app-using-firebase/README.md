@@ -9,7 +9,7 @@ Here we'll see a fast step-by-step tutorial, to deploy your react app.
 ### Make sure NPM and NPX are installed locally
 
 If you don't have them, first install NPM by downloading Node.js.
-After that, you can install NPX via CI, using:
+After that, you can install NPX via CLI, using:
 
 `npm install -g npx`
 
