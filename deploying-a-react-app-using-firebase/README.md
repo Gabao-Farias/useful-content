@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="300px" src="./react-native-firebase-1.svg" />
+  <img width="800px" src="https://firebase.google.com/images/brand-guidelines/logo-standard.png?authuser=1&hl=pt-BR" />
   <h1>Automating the Deploy of a React App Using Firebase and Github Actions</h1>
 </div>
 
